@@ -1,0 +1,25 @@
+{
+  "name": "supabase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/**/*",
+    "supabase"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flo-Leroux/supabase-workspace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flo-Leroux/supabase-workspace/issues"
+  },
+  "homepage": "https://github.com/Flo-Leroux/supabase-workspace#readme"
+}
