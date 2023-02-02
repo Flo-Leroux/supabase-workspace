@@ -1,0 +1,3 @@
+[submodule "packages/supabase-js"]
+	path = packages/supabase-js
+	url = git@github.com:Flo-Leroux/supabase-js.git
