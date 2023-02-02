@@ -4,3 +4,6 @@
 [submodule "packages/postgres-meta"]
 	path = packages/postgres-meta
 	url = git@github.com:Flo-Leroux/postgres-meta.git
+[submodule "packages/postgrest-js"]
+	path = packages/postgrest-js
+	url = git@github.com:Flo-Leroux/postgrest-js.git
