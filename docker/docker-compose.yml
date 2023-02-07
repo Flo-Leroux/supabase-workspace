@@ -193,9 +193,7 @@ services:
 
   meta:
     container_name: supabase-meta
-    # image: supabase/postgres-meta:v0.59.0
-    build:
-      context: ../packages/postgres-meta
+    image: supabase/postgres-meta:v0.59.0
     depends_on:
       db: # Disable this if you are using an external Postgres database
         condition: service_healthy
@@ -207,9 +205,6 @@ services:
       PG_META_DB_NAME: ${POSTGRES_DB}
       PG_META_DB_USER: supabase_admin
       PG_META_DB_PASSWORD: ${POSTGRES_PASSWORD}
-    volumes:
-        - ../packages/postgres-meta/:/usr/src/app/
-        # - ../packages/postgres-meta/nodemodules:/src/node_modules
 
   # Comment out everything below this point if you are using an external Postgres database
   db:
@@ -241,4 +236,6 @@ services:
     volumes:
       - ./volumes/db/realtime.sql:/docker-entrypoint-initdb.d/realtime.sql
       - ./volumes/db/roles.sql:/docker-entrypoint-initdb.d/roles.sql
+      # Must be superuser to enable pg_net extension
+      - ./volumes/db/webhooks.sql:/etc/postgresql.schema.sql
       - ./volumes/db/data:/var/lib/postgresql/data

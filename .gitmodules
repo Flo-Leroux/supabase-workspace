@@ -10,3 +10,7 @@
 	path = packages/postgrest-js
 	url = git@github.com:Flo-Leroux/postgrest-js.git
 	branch = develop
+[submodule "packages/supabase-ts"]
+	path = packages/supabase-ts
+	url = git@github.com:Flo-Leroux/supabase-ts.git
+	branch = develop
